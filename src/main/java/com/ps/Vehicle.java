@@ -21,67 +21,83 @@ public class Vehicle {
         this.price = price;
     }
 
-    public int getVin() {
+    public int getVin()
+    {
         return vin;
     }
 
-    public void setVin(int vin) {
+    public void setVin(int vin)
+    {
         this.vin = vin;
     }
 
-    public int getYear() {
+    public int getYear()
+    {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(int year)
+    {
         this.year = year;
     }
 
-    public String getMake() {
+    public String getMake()
+    {
         return make;
     }
 
-    public void setMake(String make) {
+    public void setMake(String make)
+    {
         this.make = make;
     }
 
-    public String getModel() {
+    public String getModel()
+    {
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(String model)
+    {
         this.model = model;
     }
 
-    public String getVehicleType() {
+    public String getVehicleType()
+    {
         return vehicleType;
     }
 
-    public void setVehicleType(String vehicleType) {
+    public void setVehicleType(String vehicleType)
+    {
         this.vehicleType = vehicleType;
     }
 
-    public String getColor() {
+    public String getColor()
+    {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(String color)
+    {
         this.color = color;
     }
 
-    public int getOdometer() {
+    public int getOdometer()
+    {
         return odometer;
     }
 
-    public void setOdometer(int odometer) {
+    public void setOdometer(int odometer)
+    {
         this.odometer = odometer;
     }
 
-    public double getPrice() {
+    public double getPrice()
+    {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(double price)
+    {
         this.price = price;
     }
 
