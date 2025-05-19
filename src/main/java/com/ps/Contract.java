@@ -3,13 +3,13 @@ package com.ps;
 public abstract class Contract {
 
 
-    protected String dateOfContract;
-    protected String customerName;
-    protected String customerEmail;
-    protected Vehicle vehicle;
-    protected double totalPrice;
-    protected double monthlyPayment;
-    protected boolean isFinanced;
+    String dateOfContract;
+    String customerName;
+    String customerEmail;
+    Vehicle vehicle;
+    double totalPrice;
+    double monthlyPayment;
+    boolean isFinanced;
 
 
     public Contract(String dateOfContract, String customerName, String customerEmail, Vehicle vehicle) {

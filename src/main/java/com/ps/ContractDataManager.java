@@ -16,16 +16,16 @@ public class ContractDataManager {
             stringBuilder.append(contract.getCustomerName()).append("|");
             stringBuilder.append(contract.getCustomerEmail()).append("|");
 
-            Vehicle v = contract.getVehicle();
+            Vehicle vehicle = contract.getVehicle();
 
-            stringBuilder.append(v.getVin()).append("|")
-                    .append(v.getYear()).append("|")
-                    .append(v.getMake()).append("|")
-                    .append(v.getModel()).append("|")
-                    .append(v.getVehicleType()).append("|")
-                    .append(v.getColor()).append("|")
-                    .append(v.getOdometer()).append("|")
-                    .append(v.getPrice()).append("|");
+            stringBuilder.append(vehicle.getVin()).append("|")
+                    .append(vehicle.getYear()).append("|")
+                    .append(vehicle.getMake()).append("|")
+                    .append(vehicle.getModel()).append("|")
+                    .append(vehicle.getVehicleType()).append("|")
+                    .append(vehicle.getColor()).append("|")
+                    .append(vehicle.getOdometer()).append("|")
+                    .append(vehicle.getPrice()).append("|");
 
 
             if (contract instanceof SalesContract) {
@@ -97,27 +97,27 @@ public class ContractDataManager {
                     boolean isFinanced = index[16].equals("YES");
                     double monthlyPayment = Double.parseDouble(index[17]);
 
-                    SalesContract sc = new SalesContract(date, name, email, vehicle, isFinanced);
-                    sc.setSalesTax(salesTax);
-                    sc.setRecordingFee(recordingFee);
-                    sc.setProcessingFee(processingFee);
-                    sc.setTotalPrice(totalPrice);
-                    sc.setMonthlyPayment(monthlyPayment);
+                    SalesContract salesContract = new SalesContract(date, name, email, vehicle, isFinanced);
+                    salesContract.setSalesTax(salesTax);
+                    salesContract.setRecordingFee(recordingFee);
+                    salesContract.setProcessingFee(processingFee);
+                    salesContract.setTotalPrice(totalPrice);
+                    salesContract.setMonthlyPayment(monthlyPayment);
 
-                    contracts.add(sc);
+                    contracts.add(salesContract);
                 } else if (type.equals("LEASE")) {
                     double expectedEndingValue = Double.parseDouble(index[12]);
                     double leaseFee = Double.parseDouble(index[13]);
                     double totalPrice = Double.parseDouble(index[14]);
                     double monthlyPayment = Double.parseDouble(index[15]);
 
-                    LeaseContract lc = new LeaseContract(date, name, email, vehicle);
-                    lc.setExpectedEndingValue(expectedEndingValue);
-                    lc.setLeaseFee(leaseFee);
-                    lc.setTotalPrice(totalPrice);
-                    lc.setMonthlyPayment(monthlyPayment);
+                    LeaseContract leaseContract = new LeaseContract(date, name, email, vehicle);
+                    leaseContract.setExpectedEndingValue(expectedEndingValue);
+                    leaseContract.setLeaseFee(leaseFee);
+                    leaseContract.setTotalPrice(totalPrice);
+                    leaseContract.setMonthlyPayment(monthlyPayment);
 
-                    contracts.add(lc);
+                    contracts.add(leaseContract);
                 }
             }
         } catch (IOException | NumberFormatException e) {
